@@ -2,12 +2,14 @@
 \usepackage{zhlipsum,mwe}
 \usepackage{longtable}
 \usepackage{float}
+\usepackage{array}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{multirow}
 %\usepackage[super]{cite}
 \bianhao{MC25002355}
 \tihao{C}
-\timu{论文标题}
+\timu{拼 好 脑}
 \keyword{content；content；content}
 %\bibliographystyle{gbt7714-numerical}
 \bibliographystyle{unsrt-cn}
@@ -15,13 +17,30 @@
 \numberwithin{equation}{section}
 \begin{document}
 
+
+
     \begin{abstract}
 
-        摘要
+        摘要\cite{DSJS202403017}
 
         摘要
     \end{abstract}
 
     \tableofcontents
     \section{问题背景}
+
+
+    \phantomsection
+	\addcontentsline{toc}{section}{参考文献}
+	\bibliography{ref}
+
+	\newpage
+	\appendix
+	\ctexset{section={
+		format={\zihao{-4}\heiti\raggedright}
+	}}
+	\begin{center}
+		\heiti\zihao{4} 附\hspace{1pc}录
+	\end{center}
+	\section{问题一的 MATLAB 代码}
 \end{document}
